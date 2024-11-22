@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        
+        #wire {
+            top: 0;
+            left: 250px;
+            width: 701px;
+            height: 2rem;
+            position: absolute;
+            /* background: #333; */
+            background:repeating-linear-gradient(90deg,transparent 0%,transparent 10%, black 10%, black 10.2%);
+            z-index: 20;
+        }
+        .syringe {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            height: 150px;
+            /* border: 1px solid #999999; */
+        }
+
+        .syringe::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 11%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 150px;
+            border: 0.5px solid #777;
+            background: rgb(253, 253, 253);
+            border-radius: 1rem;
+            background-image: linear-gradient(#ffffff4f 0%, #6969693f 65%, #ffffff52 100%);
+            z-index: 1;
+        }
+
+        .tow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 150px;
+            border: 1px solid #fff;
+            border-radius: 1rem;
+        }
+
+        .tow::before {
+
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 106%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 1px;
+            /* border: 1px solid #000000; */
+            background-color: #000000;
+
+        }
+
+        .tow::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 917px;
+            height: 100px;
+            border: 1px solid #777;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            background-image: linear-gradient(#ffffff4f 0%, #6969693f 65%, #ffffff52 100%);
+        }
+
+
+        .syringe::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 150px;
+            border: 0.5px solid #777;
+            background-image: linear-gradient(#ffffff4f 0%, #6969693f 65%, #ffffff52 100%),
+                linear-gradient(90deg, rgb(255, 255, 255) 45%, black 45%, black 55%, rgb(245, 245, 121) 55%);
+        }
+
+        #text {
+            top: 121px;
+            right: 812px;
+            position: absolute;
+            width: 118px;
+            height: 18px;
+            font-size: 1rem;
+            padding: 0.3rem;
+            /* background-color: aquamarine; */
+            font-family: "Roboto", sans-serif;
+            color: #999;
+            z-index: 10;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="syringe">
+        <div class="tow">
+        </div>
+        <div class="syringe::after">
+            <div id="text">Made in Taiwan</div>
+            <div id="wire"></div>
+        </div>
+    </div>
+</body>
+
+</html>
